@@ -32,6 +32,8 @@
                     </div>
                     
                     <button type="submit" class="btn btn-primary mt-2">Agregar</button>
+                    
+                    <a href="${pageContext.request.contextPath}/producto?idProducto=${producto.idProducto}&accion=eliminar" class="btn btn-danger mt-2">Eliminar producto</a>
                 </form>
             </div>
        
