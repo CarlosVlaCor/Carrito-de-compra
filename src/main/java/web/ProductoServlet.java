@@ -20,7 +20,19 @@ public class ProductoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        this.abrirModificar(request, response);
+        String accion = request.getParameter("accion");
+        System.out.println(accion);
+        if(null == accion){
+           this.abrirModificar(request, response);
+        }else switch (accion) {
+             case "eliminar":
+                 this.eliminarProducto(request, response);
+                 break;
+             default:
+                response.sendRedirect(request.getContextPath());
+                 break;
+         }
+       
     }
 
     @Override
@@ -69,4 +81,12 @@ public class ProductoServlet extends HttpServlet {
          request.setAttribute("producto", producto);
          request.getRequestDispatcher("WEB-INF/paginas/productos/editarProducto.jsp").forward(request, response);
      }
+     
+      private void eliminarProducto(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException{
+          int idProducto = Integer.parseInt(request.getParameter("idProducto"));
+          Producto producto = new Producto(idProducto);
+          System.out.println(productoDAO.eliminarProducto(producto));
+          response.sendRedirect(request.getContextPath());
+      }
 }
