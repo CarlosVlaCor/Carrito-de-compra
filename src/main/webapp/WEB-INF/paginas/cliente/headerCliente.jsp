@@ -4,6 +4,12 @@
             <div class="col-md-9">
                 <h1>MISAN</h1> 
             </div>
+            <div class="mt-2">
+                <a href="${pageContext.request.contextPath}/cliente/carritoCompra?idCliente=${usuario.id}"class="btn btn-dark" >
+                    <i class="fa-solid fa-cart-shopping"></i> Carrito
+                </a>
+                
+            </div>
             <div class="dropdown pt-2">
                 <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
                     ${usuario.nombre}

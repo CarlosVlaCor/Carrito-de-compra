@@ -35,13 +35,13 @@ public class UsuarioClienteDAO {
     }
     
     public Usuario loguearUsuario(Usuario usuario){
-        Conexion con = new Conexion();
+       
         Connection conexion = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         Usuario us = null;
         try {
-            conexion = con.getConexion();
+            conexion = Conexion.getConexion();
             ps = conexion.prepareStatement(SQL_FIND_BY_EMAIL_AND_PASS);
             ps.setString(1, usuario.getEmail());
             ps.setString(2, usuario.getPassword());
@@ -52,9 +52,9 @@ public class UsuarioClienteDAO {
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
         }finally{
-            con.close(rs);
-            con.close(ps);
-            con.close(conexion);
+            Conexion.close(rs);
+            Conexion.close(ps);
+            Conexion.close(conexion);
         }
         return us;
     }

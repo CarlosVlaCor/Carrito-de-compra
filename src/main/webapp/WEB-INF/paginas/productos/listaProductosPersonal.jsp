@@ -31,15 +31,10 @@
                         <td>
                             <div class="container">
                                 <a class="btn btn-primary" href="${pageContext.request.contextPath}/producto?idProducto=${producto.idProducto}">
-                                 <i class="fa-solid fa-file-pen"></i>
+                                    <i class="fa-solid fa-file-pen"></i>
                                 </a>
-                                
-                                <a class="btn btn-danger">
-                                 <i class="fa-solid fa-trash"></i>
-                                </a>
-                                
                             </div>
-                            
+
                         </td>
                     </tr>
                 </c:forEach>

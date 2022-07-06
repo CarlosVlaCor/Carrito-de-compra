@@ -42,7 +42,7 @@ public class ServletLogin extends HttpServlet {
             if (usuario != null) {
 
                 sesion.setAttribute("usuario", usuario);
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+                response.sendRedirect(request.getContextPath());
             } else {
                 response.sendRedirect(request.getContextPath() + "/login?error");
             }

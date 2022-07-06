@@ -10,7 +10,7 @@
         <script src="https://kit.fontawesome.com/2c301b3f37.js" crossorigin="anonymous"></script>
         <title>Carrito de Compra</title>   
     </head>
-    <body>
+    <body class="bg-light d-flex flex-column min-vh-100">
         <jsp:include page="/WEB-INF/paginas/personal/headerPersonal.jsp"/>
          <div class="container mt-4">
             <div class="card">
