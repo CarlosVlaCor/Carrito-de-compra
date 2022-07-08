@@ -25,7 +25,8 @@
                                 <button type="button" class="close" data-dismiss="modal"/>&times;</button>
                             </div>
                             <div class="modal-body">
-                                <form class="was-validated" action="${pageContext.request.contextPath}/producto?accion=insertar" method="POST">
+                                <form class="was-validated" action="${pageContext.request.contextPath}/carrito?idProducto=${producto.idProducto}&accion=insertar" method="POST">
+                                    
                                     <div class="form-group">
                                         <label for="stock">Cantidad: </label>
                                         <input type="number" class="form-control" name="cantidad" required/>

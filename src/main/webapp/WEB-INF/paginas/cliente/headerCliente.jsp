@@ -1,11 +1,9 @@
 <header class="bg-dark text-white py-2">
     <div class="container ">
         <div class="row ">
-            <div class="col-md-9">
-                <h1>MISAN</h1> 
-            </div>
+            <%@include file="/WEB-INF/paginas/comunes/logo.jsp" %>
             <div class="mt-2">
-                <a href="${pageContext.request.contextPath}/cliente/carritoCompra?idCliente=${usuario.id}"class="btn btn-dark" >
+                <a href="${pageContext.request.contextPath}/carrito"class="btn btn-dark" >
                     <i class="fa-solid fa-cart-shopping"></i> Carrito
                 </a>
                 

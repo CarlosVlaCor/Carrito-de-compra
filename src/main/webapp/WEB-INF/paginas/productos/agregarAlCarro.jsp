@@ -7,7 +7,7 @@
             </div>
             <div class="modal-body">
                 <p>${producto.nombre}</p>
-                <form class="was-validated p-4" action="${pageContext.request.contextPath}/producto?accion=insertar" method="POST">
+                <form class="was-validated p-4" action="${pageContext.request.contextPath}/carrito?idProductoaccion=insertar" method="POST">
                     <div class="form-group">
                         <label for="stock">Cantidad: </label>
                         <input type="number" class="form-control" name="cantidad" required/>

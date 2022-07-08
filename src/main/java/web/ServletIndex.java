@@ -34,7 +34,7 @@ public class ServletIndex extends HttpServlet{
                  request.getRequestDispatcher("WEB-INF/paginas/cliente/indexCliente.jsp").forward(request, response);
             }
         }else{
-            request.getRequestDispatcher("WEB-INF/paginas/cliente/indexCliente.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/paginas/sinLogin/indexSinLogin.jsp").forward(request, response);
         }
         
         
