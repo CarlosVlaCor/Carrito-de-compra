@@ -108,7 +108,9 @@ public class ServletUsuarioProducto extends HttpServlet {
             throws ServletException, IOException {
 
         int idUsuarioProducto = Integer.parseInt(request.getParameter("idUsuarioProducto"));
+       
         int cantidad = Integer.parseInt(request.getParameter("cantidad"));
+        
         UsuarioProducto usuarioProducto = new UsuarioProducto(idUsuarioProducto,cantidad);
         System.out.println(usuarioProductoDAO.modificarUsuarioProducto(usuarioProducto));
         response.sendRedirect(request.getContextPath()+"/carrito");
